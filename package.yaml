@@ -1,0 +1,53 @@
+name:                ocr-gpt-fix
+synopsis:            Fix OCR scans of Spanish novel pages with GPT
+
+dependencies:
+  - base >= 4.7 && < 5
+  - aeson
+  - bytestring
+  - casing
+  - cpphs
+  - http-client
+  - http-client-tls
+  - http-types
+  - openai-servant >= 0.2.4
+  - optparse-applicative
+  - servant
+  - servant-client
+  - servant-multipart-client
+  - split
+  - text
+  - text-metrics
+  - vector
+
+ghc-options:
+  - -Wall
+  - -fwarn-tabs
+  - -fwarn-incomplete-uni-patterns
+  - -fwarn-incomplete-record-updates
+
+default-extensions:
+  - OverloadedStrings
+  - DataKinds
+  - TypeOperators
+  - TypeFamilies
+  - GADTs
+  - FlexibleInstances
+  - FlexibleContexts
+  - MultiParamTypeClasses
+  - StrictData
+  - ScopedTypeVariables
+  - DeriveGeneric
+  - DeriveFunctor
+
+executables:
+  ocr-gpt-fix:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -O2
+    - -with-rtsopts=-N
+    dependencies:
+    - openai-hs

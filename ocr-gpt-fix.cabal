@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           ocr-gpt-fix
+version:        0.0.0
+synopsis:       Fix OCR scans of Spanish novel pages with GPT
+build-type:     Simple
+
+executable ocr-gpt-fix
+  main-is: Main.hs
+  other-modules:
+      Paths_ocr_gpt_fix
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings
+      DataKinds
+      TypeOperators
+      TypeFamilies
+      GADTs
+      FlexibleInstances
+      FlexibleContexts
+      MultiParamTypeClasses
+      StrictData
+      ScopedTypeVariables
+      DeriveGeneric
+      DeriveFunctor
+  ghc-options: -Wall -fwarn-tabs -fwarn-incomplete-uni-patterns -fwarn-incomplete-record-updates -threaded -rtsopts -O2 -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , casing
+    , cpphs
+    , http-client
+    , http-client-tls
+    , http-types
+    , openai-hs
+    , openai-servant >=0.2.4
+    , optparse-applicative
+    , servant
+    , servant-client
+    , servant-multipart-client
+    , split
+    , text
+    , text-metrics
+    , vector
+  default-language: Haskell2010

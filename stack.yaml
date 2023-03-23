@@ -1,0 +1,16 @@
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/17.yaml
+
+packages:
+  - .
+
+extra-deps:
+  - git: https://github.com/IamfromSpace/openai-hs
+    commit: 4f957f7d1fb75f547503dd2a6a04f6c9f206aa71
+    subdirs:
+      - openai-hs
+      - openai-servant
+
+nix:
+  enable: true
+  shell-file: shell.nix
